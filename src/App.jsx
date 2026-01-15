@@ -61,11 +61,9 @@ const SERVICE_LINKS = [
   },
   { 
     id: 4, 
-    // แก้ไขชื่อตามที่ขอครับ
-    title: "จดหมายออนไลน์ DomiMail", 
+    title: "จดหมายออนไลน์", 
     icon: <img src="https://img.icons8.com/fluency/96/mail.png" alt="Mail" className="w-10 h-10 object-contain drop-shadow-sm transition-transform group-hover:scale-110" />,
     color: "bg-orange-50/50", 
-    // ใส่ action พิเศษ เพื่อให้ระบบรู้ว่าต้องเช็ค OS สำหรับ DomiMail
     action: 'domimail' 
   },
   { 
@@ -178,13 +176,13 @@ export default function App() {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       
       if (/android/i.test(userAgent)) {
-        // สำหรับ Android -> ลิงค์ไป "DomiMail - แอปพลิเคชันใน Google Play"
-        window.location.href = 'https://play.google.com/store/apps/details?id=net.domimail.customer';
+        // Android Link (แก้ไขใหม่ให้ถูกต้อง)
+        window.open('https://play.google.com/store/apps/details?id=com.domitech.app', '_blank');
       } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        // สำหรับ iOS -> ลิงค์ไป "DomiMail App - App Store"
-        window.location.href = 'https://apps.apple.com/th/app/domimail/id1451553535';
+        // iOS Link (แก้ไขใหม่ให้ถูกต้อง)
+        window.open('https://apps.apple.com/th/app/domimail/id1604424556', '_blank');
       } else {
-        // สำหรับคอมพิวเตอร์ -> ไปหน้าเว็บหลัก
+        // PC Link
         window.open('https://www.domimail.net/', '_blank');
       }
     } else if (link.url) {
