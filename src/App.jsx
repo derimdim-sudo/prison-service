@@ -179,7 +179,7 @@ export default function App() {
         // Android Link (แก้ไขใหม่ให้ถูกต้อง)
         window.open('https://play.google.com/store/apps/details?id=com.domitech.app', '_blank');
       } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        // iOS Link (แก้ไขใหม่ให้ถูกต้อง)
+        // iOS Link (แก้ไขใหม่ให้ถูกต้องล่าสุด)
         window.open('https://apps.apple.com/th/app/domimail/id1604424556', '_blank');
       } else {
         // PC Link
